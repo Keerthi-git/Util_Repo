@@ -7,5 +7,14 @@ def execute () {
             version=pom.version
             print 'checkout success'
    }
+  
+  stage('Build'){
+    sh mvn clean install
+  }
+  
+  stage('artifactry upload') {
+            common.uploadArtifactory();
+            sh prop.WAR_FILE+' '+prop.DEPLOY_LOCATION 
+         }
 }
 return this
