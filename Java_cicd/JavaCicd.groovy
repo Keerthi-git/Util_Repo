@@ -6,4 +6,6 @@ def execute () {
             artifactId=pom.artifactId
             version=pom.version
             print 'checkout success'
-  }
+   }
+}
+return this
