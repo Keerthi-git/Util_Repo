@@ -9,7 +9,7 @@ def execute () {
    }
   
   stage('Build'){
-    sh mvn clean install
+    sh 'mvn clean install'
   }
   
   stage('artifactry upload') {
