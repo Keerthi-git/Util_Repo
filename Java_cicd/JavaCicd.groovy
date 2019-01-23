@@ -10,7 +10,7 @@ def execute () {
   
   stage('Build'){
     sh prop.HOST+' '+prop.LOGIN
-    
+    print'sonar success'
     sh 'mvn clean install'
   }
   
