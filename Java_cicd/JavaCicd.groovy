@@ -9,6 +9,10 @@ def execute () {
    }
   
   stage('Build'){
+    sh 'mvn sonar:sonar \
+    -Dsonar.host.url="${prop.HOST}" \
+  -Dsonar.login="${prop.LOGIN}"'
+    
     sh 'mvn clean install'
   }
   
