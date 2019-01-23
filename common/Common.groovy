@@ -13,7 +13,7 @@ def uploadArtifactory() {
 
 def sendEmail() {
   emailext(
-    subject:'${DEFAUKT_SUBJECT}',
+    subject:'${DEFAULT_SUBJECT}',
     body: '${DEFAULT_CONTENT}',
     to:prop.EMAIL_RECIPIENT
   );
