@@ -11,6 +11,15 @@ def uploadArtifactory() {
   }
 }
 
+def sendEmail() {
+  emailtest(
+    subject:'${DEFAUKT_SUBJECT}',
+    body: '${DEFAULT_CONTENT}',
+    to:prop.EMAIL_RECIPIENT
+  );
+  print 'mail sent'
+}
+
 def cleanWorkspace() {
   script {
     sh 'rm -rf ../'+jobName+'/*'
