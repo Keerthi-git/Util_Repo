@@ -9,7 +9,7 @@ def execute () {
    }
   
   stage('Build'){
-    
+    sh prop.HOST+' '+prop.LOGIN
     
     sh 'mvn clean install'
   }
