@@ -8,13 +8,13 @@ def execute () {
             print 'checkout success'
    }
   
-  stage('Build'){
+  stage('Sonar scan and maven Build'){
     sh prop.HOST+' '+prop.LOGIN
     print'sonar success'
     sh 'mvn clean install'
   }
   
-  stage('artifactry upload') {
+  stage('artifactry upload and tomcat deployment') {
             common.uploadArtifactory();
             sh prop.WAR_FILE+' '+prop.DEPLOY_LOCATION 
          }
