@@ -21,7 +21,7 @@ def execute () {
   
   stage ('Docker deployment') {
     sh 'docker stop $(docker ps -a -q --filter ancestor=tomcat:8.0)'
-	sh 'docker build --tag tomcat --file Util_Repo/docker/dockerfile'
+	sh 'docker build --file Util_Repo/docker/dockerfile'
 	sh 'docker run --rm -d -p 8084:8080 tomcat:8.0'
 	  
   }
