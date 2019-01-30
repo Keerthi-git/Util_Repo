@@ -9,7 +9,7 @@ def execute () {
    }
   
   stage('Sonar scan and maven Build'){
-    sh prop.HOST+' '+prop.LOGIN
+    /*sh prop.HOST+' '+prop.LOGIN*/
     print'sonar success'
     sh 'mvn clean install'
   }
